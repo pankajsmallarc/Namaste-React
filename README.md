@@ -1,0 +1,12 @@
+# parcel
+- build
+- create local server
+- HMR = hot module replacement
+- file watching alogorithm
+- caching-faster build
+- image optimization
+- minification
+- bundling
+- Compressing
+- Differential boundling- support older browsers
+- Https 
