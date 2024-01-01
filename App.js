@@ -1,22 +1,10 @@
-import React from 'react';
-import ReactDOM  from 'react-dom/client';
-const parentComponent = React.createElement(
-    "div",
-    { id: "parent" },
-    [
-        React.createElement("div", { id: "child" },
-        [
-            React.createElement("h1", {}, "I am child react"),
-            React.createElement("h2", {}, "I am child-2 React333rrr")
-        ]),
-        React.createElement("div", { id: "child" },
-        [
-            React.createElement("h1", {}, "I am child"),
-            React.createElement("h2", {}, "I am child-2")
-        ])
-    ]
-);
-console.log("====>", parentComponent);
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+const heading = React.createElement("h1", { id: "heading" }, "Namaste React");
+
+const jsx = <h1 className="heading">Hello React</h1>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parentComponent);
+
+root.render(jsx);
