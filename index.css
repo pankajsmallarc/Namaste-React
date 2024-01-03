@@ -1,3 +1,48 @@
-.heading{
-color: brown;
+.header{
+    display:flex;
+    border: 2px solid black;
+}
+
+.logo{
+    width: 100px;
+}
+.navlinks{
+    padding: 0px 20px;
+}
+
+.navlinks> ul{
+display: flex;
+list-style: none;
+font-size: large;
+}
+
+.navlinks >ul >li{
+    padding: 10px;
+    margin: 10px;
+}
+
+.res-card{
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid black;
+    background-color: palevioletred;
+    
+}
+.res-card:hover{
+    border: 1px solid red;
+}
+
+.search{
+    padding: 10px;
+}
+
+.res-img{
+    width: 100%;
+}
+
+.res-container{
+    display: flex;
+
+    flex-wrap: wrap;
 }
