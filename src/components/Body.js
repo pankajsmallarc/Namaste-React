@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import RestaurentCard from "./RestaurentCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineSataus";
 
 const Body = () => {
   const [resData, setResData] = useState([]);
   const [serachText, setsearchText] = useState("");
   const [filteredRes, setFilteredRes] = useState([]);
+
+  const isOnlineStatus = useOnlineStatus();
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -18,18 +22,23 @@ const Body = () => {
     const json = await res.json();
 
     setResData(
-      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRes(
-      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+
   };
 
   const handleClick = () => {
     const listOfRestorent = resData.filter((res) => res.info.avgRating > 4.2);
     setResData(listOfRestorent);
   };
-
+if(isOnlineStatus === false){
+  return(
+    <h1>You are offline. please check your internet</h1>
+  )
+}
   return resData.length == 0 ? (
     <Shimmer />
   ) : (

@@ -4,7 +4,7 @@ const CDN_URL =
 const LOGO_URL =
   "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png";
 
-const MMENU_API =
+const MENU_API =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=27.1766701&lng=78.00807449999999&restaurantId=";
 
-export { CDN_URL, LOGO_URL, MMENU_API };
+export { CDN_URL, LOGO_URL, MENU_API };
